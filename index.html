@@ -32,24 +32,27 @@
 
         <h2>Escolha o tamanho da tabela</h2>
         <form id="sizePicker">
-            Grid Altura / Linhas:
+            <br> Grid Altura / Linhas:
             <input type="number" id="inputHeight" name="height" min="1" value="1"> Grid Largura / Colunas:
             <input type="number" id="inputWidth" name="width" min="1" value="1">
+            <br><br>Tamanho Células Pixels (px)
+            <input type="number" id="inputCell" name="size" min="1" value="50">
             <input value="Criar tabela" type="submit">
         </form>
 
-        <h2>Selecione a cor</h2>
-        <input type="color" id="colorPicker">
-
-        <h2>Design da Tabela</h2>
-
-        <table id="pixelCanvas"></table>
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="designs.js"></script>
         <br>
         <div id="salvar" style="visibility:hidden">
+            <h2>Selecione a cor</h2>
+            <input type="color" id="colorPicker">
+
+            <h2>Design da Tabela</h2>
+
+            <table id="pixelCanvas"></table>
+            <br>
             <button onclick="salvarTabela()">Exportar Tabela</button>
 
 
@@ -57,7 +60,7 @@
         <div id="generateCode" style="visibility:hidden">
             <br>
             <br>
-            <strong>Agora é só copiar a estrutura gerada abaixo e adicionar no seu arquivo .HTML :) </strong>
+            <strong>Agora é só copiar a estrutura gerada abaixo em um arquivo .html :) </strong>
             <br>
             <br>
             <textarea id="tableText"></textarea>

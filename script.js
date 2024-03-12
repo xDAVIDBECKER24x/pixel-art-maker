@@ -5,6 +5,7 @@ const $inputHeight = $("#inputHeight");
 const $inputWidth = $("#inputWidth");
 const $colorPicker = $("#colorPicker");
 
+
 $("#sizePicker").submit((event) => {
     event.preventDefault();
 
@@ -18,14 +19,17 @@ $("#sizePicker").submit((event) => {
 });
 
 function salvarTabela() {
+    let size = document.getElementById('inputCell').value;
     document.getElementById("tableText").innerText =
-        "<table style='border-spacing: 0px;height: 720px; width: 720px;'>" +
+        "<html><style>td {width: " +
+        size +
+        "px;height: " +
+        size +
+        "px;}</style><body><table style='border-spacing: 0px;height: 720px; width: 720px;'>" +
         document.getElementById("pixelCanvas").innerHTML +
-        "</table>";
+        "</table></body></html>";
     document.getElementById("generateCode").style.visibility = "visible";
-
 }
-
 
 function makeGrid(height, width) {
     for (let i = 0; i < height; i++) {
