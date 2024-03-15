@@ -25,11 +25,7 @@ function salvarTabela() {
         size +
         "px;height: " +
         size +
-<<<<<<< HEAD
         "px;}</style><body><table style='border-spacing: 0px;'>" +
-=======
-        "px;}</style><body><table style='border-spacing: 1px;height: 720px; width: 720px;'>" +
->>>>>>> 849303124dced849a5261e4d1f8d0d7611467788
         document.getElementById("pixelCanvas").innerHTML +
         "</table></body></html>";
     document.getElementById("generateCode").style.visibility = "visible";
